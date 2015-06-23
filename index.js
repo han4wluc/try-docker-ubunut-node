@@ -10,9 +10,9 @@ app.get('/', function (req, res) {
 });
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/node-mongo');
+mongoose.connect('mongodb://mongo4/node-mongo');
 mongoose.connection.once('open', function(callback){
-  console.log('mongoose connection opened at ' + 'mongodb://localhost/node-mongo');
+  console.log('mongoose connection opened at ' + 'mongodb://mongo4/node-mongo');
 });
 mongoose.connection.on('error', console.log);
 mongoose.connection.on('disconnected', console.log);
