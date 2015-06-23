@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/haroo', function (req, res) {
-  res.send('Haroo how are you?\n');
+  res.send('Konnichiwa?\n');
 });
 
 var mongoose = require('mongoose');
