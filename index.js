@@ -9,6 +9,10 @@ app.get('/', function (req, res) {
   res.send('Hello world\n');
 });
 
+app.get('/haroo', function (req, res) {
+  res.send('Haroo how are you?\n');
+});
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://'+process.env.MONGO+'/node-mongo');
 mongoose.connection.once('open', function(callback){
