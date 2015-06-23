@@ -9,5 +9,5 @@ RUN cd /node; npm install; npm install -g nodemon
 
 EXPOSE 8080
 
-CMD ["nodemon", "/node/index.js"]
+CMD ["nodemon", "/node/index.js -w /node/*"]
 
