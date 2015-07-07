@@ -4,6 +4,10 @@
   "version": "0.0.1",
   "description": "Node.js Hello world app oUbuntu using docker",
   "author": "ASDFa <adsf@asdfa.ch>",
+  "scripts": {
+    "start": "nodemon server.js -w app/* --delay 1.5",
+    "test": "mocha app/**/*.spec.js"
+  },
   "dependencies": {
     "express": "3.2.4",
     "mongoose": "^4.0.2"

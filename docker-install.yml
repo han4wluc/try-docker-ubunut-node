@@ -1,0 +1,4 @@
+- hosts: web
+  tasks:
+   - name: step1
+     shell: wget -qO- https://get.docker.com/ | sh

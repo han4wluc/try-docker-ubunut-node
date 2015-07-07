@@ -1,0 +1,4 @@
+- hosts: web
+  tasks:
+   - name: step1
+     shell: cd /root/node-mongo/node; git pull origin

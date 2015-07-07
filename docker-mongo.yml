@@ -1,0 +1,4 @@
+- hosts: web
+  tasks:
+   - name: step1
+     shell: docker run --name mongo_users -v /data/db:/data/db -d mongo

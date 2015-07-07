@@ -1,0 +1,14 @@
+- hosts: web
+  tasks:
+   - name: step1
+     shell: docker pull han4wluc/try-docker-ubunut-node:latest
+   - name: step2
+     command: docker stop node-ubu-2
+   - name: step3
+     command: docker rm node-ubu-2
+   - name: step4
+     command: docker rmi han4wluc/try-docker-ubunut-node:current
+   - name: step5
+     command: docker tag han4wluc/try-docker-ubunut-node:latest han4wluc/try-docker-ubunut-node:current
+   - name: step6
+     command: docker run -e MONGO=mongo4 --name node-ubu-2 --link mongo4 -v ~/node-mongo/node:/node  -p 8080:8080 -w /node -d han4wluc/try-docker-ubunut-node:latest nodemon index.js
